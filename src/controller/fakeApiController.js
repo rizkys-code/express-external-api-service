@@ -4,6 +4,8 @@ import axios from 'axios'
 export const fakeApiController = async (req,res) =>{
     try{
         const respoonse = await axios.get('https://dummyjson.com/users')
+
+        // ini di pakai ketika response API hanya memiliki 1 data tapi tetap dalam bentuk array
         const users = respoonse.data.users[0];
 
         const user = {
